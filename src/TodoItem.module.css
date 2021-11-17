@@ -1,0 +1,38 @@
+.item {
+  font-size: 1.2rem;
+  list-style-type: none;
+  padding: 17px 0px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.checkbox {
+  margin-right: 15px;
+}
+
+.item button {
+  color: #fff;
+  font-size: 13px;
+  /* font-weight: bold; */
+  background: #17515a;
+  border: 1px solid white;
+  cursor: pointer;
+  float: right;
+  outline: none;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  margin: -10px 0 0 10px;
+}
+
+.item button:hover,
+.item button:active {
+  color: red;
+  border: 1px solid rgba(255, 0, 0, 0.664);
+  transform: translateY(4px);
+}
+
+.textInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+}
