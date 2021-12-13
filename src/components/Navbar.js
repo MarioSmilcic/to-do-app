@@ -1,23 +1,23 @@
 import React from 'react';
-import '../app.css';
+
 import { NavLink } from 'react-router-dom';
-import '../app.css';
+
 import styles from '../Navbar.module.css';
 
-const links = [
-  {
-    id: 1,
-    path: '/',
-    text: 'Home',
-  },
-  {
-    id: 2,
-    path: '/about',
-    text: 'About',
-  },
-];
-
 const Navbar = () => {
+  const links = [
+    {
+      id: 1,
+      path: '/',
+      text: 'Home',
+    },
+    {
+      id: 2,
+      path: '/about',
+      text: 'About',
+    },
+  ];
+
   return (
     <nav className={styles.navbar}>
       <ul>
