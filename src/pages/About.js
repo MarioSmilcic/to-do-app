@@ -1,9 +1,8 @@
-import React from 'react';
-import styles from './About.module.css';
+import React from "react";
 
 const About = () => {
   return (
-    <div className={styles.About}>
+    <div className="text-black p-20 text-justify leading-6">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ab
         accusantium qui eveniet non! Debitis quam deserunt, eaque aspernatur

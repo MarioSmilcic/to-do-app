@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import '../app.css';
-import styles from '../TodoItem.module.css';
+import React, { useState } from "react";
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
@@ -10,39 +8,42 @@ const TodoItem = (props) => {
   };
 
   const handleUpdatedDone = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       setEditing(false);
     }
   };
 
-  const completedStyle = {
-    fontStyle: 'italic',
-    color: '#F7FF00',
-    opacity: 0.4,
-    textDecoration: 'line-through',
-  };
   let viewMode = {};
   let editMode = {};
 
   if (editing) {
-    viewMode.display = 'none';
+    viewMode.display = "none";
   } else {
-    editMode.display = 'none';
+    editMode.display = "none";
   }
   return (
-    <li className={styles.item}>
+    <li className="text-lg text-gray-500 list-none py-4 px-0 border-b border-solid border-gray-300">
       <div onDoubleClick={handleEditing} style={viewMode}>
         <input
-          className={styles.checkbox}
+          className="mr-4"
           type="checkbox"
           checked={props.todo.completed}
           onChange={() => props.handleChangeProps(props.todo.id)}
         />
-        <button onClick={() => props.deleteTodoProps(props.todo.id)}>
+        <button
+          onClick={() => props.deleteTodoProps(props.todo.id)}
+          className="delete"
+        >
           Delete
         </button>
 
-        <span style={props.todo.completed ? completedStyle : null}>
+        <span
+          className={
+            props.todo.completed
+              ? "italic text-gray-400 line-through opacity-40"
+              : null
+          }
+        >
           {props.todo.title}
         </span>
       </div>
@@ -50,7 +51,7 @@ const TodoItem = (props) => {
         type="text"
         style={editMode}
         value={props.todo.title}
-        className={styles.textInput}
+        className="w-full p-2.5 border border-solid border-gray-300 text-black"
         onChange={(e) => {
           props.setUpdate(e.target.value, props.todo.id);
         }}
