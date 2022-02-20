@@ -1,25 +1,10 @@
-import React from 'react';
-import '../app.css';
+import React from "react";
 
 const Header = () => {
-  const headerStyle = {
-    padding: '20px 0',
-    lineHeight: '1.5em',
-  };
   return (
-    <div style={headerStyle}>
-      <h1
-        style={{
-          fontSize: '6rem',
-          fontWeight: '600',
-          marginBottom: '2rem',
-          lineHeight: '1em',
-          color: '#ececec',
-          textTransform: 'lowercase',
-          textAlign: 'center',
-        }}
-      >
-        Todos
+    <div className="py-5 px-0">
+      <h1 className="text-8xl font-semibold mb-8 leading-4 text-secondary capitalize text-center">
+        todos
       </h1>
     </div>
   );
